@@ -18,7 +18,6 @@ After completing this assignment, you will know how to:
  
 Overview
 --------
-
 **You may find the [Ruby documentation at ruby-doc.org](https://ruby-doc.org) helpful to have on hand.**
 
 The repo for this assigment follows a fairly standard Ruby convention for codebases: the code
