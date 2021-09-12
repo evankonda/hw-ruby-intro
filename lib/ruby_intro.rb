@@ -43,14 +43,33 @@ end
 
 def hello(name)
   # YOUR CODE HERE
+  return "Hello, " + name
 end
 
 def starts_with_consonant? s
   # YOUR CODE HERE
+  if s.match(/\A[aeiouAEIOU\W]/) or s.length == 0
+    return false
+  end
+  return true
 end
 
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+  if /[^01]+/ =~ s
+    return false
+  end 
+  if /[01]*0{2}\z/ =~ s
+    return true
+  end
+  if /[^0]+/ =~ s
+    return false
+  end 
+  if /[0]+/ =~ s
+    return true
+  end 
+  return false
+    
 end
 
 # Part 3
@@ -58,6 +77,3 @@ end
 class BookInStock
 # YOUR CODE HERE
 end
-
-print sum_to_n?([1, 2, 3], 5)
-
