@@ -23,7 +23,7 @@ def max_2_sum arr
   end
 end
 
-def sum_to_n arr, n
+def sum_to_n? arr, n
   # YOUR CODE HERE
   if arr.length <= 1
     return false
@@ -76,4 +76,22 @@ end
 
 class BookInStock
 # YOUR CODE HERE
+
+# variable - getter/setter
+attr_accessor :isbn, :price
+
+# constructor
+def initialize(isbn, price)
+  if isbn == '' or price <= 0
+    raise ArgumentError
+  else
+    @isbn, @price = isbn, price
+  end
+end
+
+# price as string
+def price_as_string()
+  '$' + '%.2f' % @price.to_s()
+end 
+
 end
